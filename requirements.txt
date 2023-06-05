@@ -1,0 +1,9 @@
+asgiref==3.7.2
+dj-database-url==2.0.0
+Django==4.2.2
+GDAL @ file:///C:/ANDRE_2022/PROGRAMACAO/ProjetosDjango/GeoDjangoIntroducao/GDAL-3.4.3-cp310-cp310-win_amd64.whl#sha256=9893da5532a6c5dadc1fc3bc402ae29d161b7cf190d778f129da84d0e50baa29
+psycopg2==2.9.6
+python-decouple==3.8
+sqlparse==0.4.4
+typing_extensions==4.6.3
+tzdata==2023.3
