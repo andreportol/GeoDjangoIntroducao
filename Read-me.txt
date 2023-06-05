@@ -1,0 +1,24 @@
+# Para trabalhar com o GeoDjango, é necessario realizar o 
+download do GDAL no site: https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal
+baixar a versão correta para o python que está instalado
+no computador e para o sistema operacional correto.
+
+# Para instalar o GDAL no terminal do VSCODE, digite:
+python -m pip i3-cp310-cp310-win_amd64.whl
+
+# Adicione no arquivo settings.py:
+1) from osgeo import gdal
+2) INSTALLED_APPS = [
+    'django.contrib.gis',
+]
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'geolocalizacao',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
