@@ -4,8 +4,8 @@ body {
 }
 
 .leaflet-container {
-    height: 800px;
-    width: 1000px;
+    height: 600px;
+    width: auto;
     max-width: 100%;
     max-height: 100%;
 }

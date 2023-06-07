@@ -13,7 +13,7 @@ const map = L.map('map', {
     zoom: 11,
     layers: [osm,]
 });
-// map.getCenter() e map.getZoom() na tela de console para ver as coordenadas
+// map.getCenter() e map.getZoom() na tela de console para ver as coordenadas.
 const baseLayers = {
     'OpenStreetMap': osm,
     'Streets': streets

@@ -3,15 +3,29 @@
 
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'libs/leaflet.css' %}">
-    <link rel="stylesheet" href="{% static 'css/map.css' %}">
+<link rel="stylesheet" href="{% static 'libs/leaflet.css' %}">
+<link rel="stylesheet" href="{% static 'css/map.css' %}">
 {% endblock extra_css %}
 
-{% block content %}
-    <div id="map"></div>
-{% endblock content %}
+{% block mapa %}
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h3 class="mt-3 text-primary"><u>GEOPROCESSAMENTO</u></h3>
+    </div>
+</div>
+<div class="row border border-2 border-primary rounded mt-3 ">
+    <div class="col-md-12">
+        <div id="map"></div>
+    </div>
+</div>
+<div class="row mt-2">
+    <div class="col-md-12">
+        <button class="btn btn-primary"><a class="text-white" href="{% url 'core:index' %}">VOLTAR</a></button>
+    </div>
+</div>
+{% endblock mapa %}
 
 {% block extra_js %}
-    <script src="{% static 'libs/leaflet.js' %}"></script>
-    <script src="{% static 'js/map.js' %}"></script>
+<script src="{% static 'libs/leaflet.js' %}"></script>
+<script src="{% static 'js/map.js' %}"></script>
 {% endblock extra_js %}

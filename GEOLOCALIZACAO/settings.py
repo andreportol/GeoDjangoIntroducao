@@ -29,8 +29,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Geodjango
     'django.contrib.gis', # Para uso em banco de dados georeferenciados
+    #My apps
     'core',
+    'imoveis',
 ]
 
 MIDDLEWARE = [

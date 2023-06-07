@@ -18,10 +18,17 @@
     <div class="container-fluid">
         {% block content %}
 
-        {% endblock %}
+        {% endblock content %}
     </div>
+
+    <div class="container">
+        {% block mapa %}
+            
+        {% endblock mapa %}
+    </div>
+
     {% block extra_js %}
-    
+
     {% endblock extra_js %}
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
