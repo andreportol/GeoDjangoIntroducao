@@ -1,3 +1,10 @@
 from django.contrib import admin
+from leaflet.admin import LeafletGeoAdmin
 
-# Register your models here.
+from .models import Imoveis
+
+
+@admin.register(Imoveis)
+class ImoveisAdmin(LeafletGeoAdmin):
+    list_display= ['codlote', 'codelote', 'inscant']
+ 

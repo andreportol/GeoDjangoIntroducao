@@ -34,6 +34,10 @@ INSTALLED_APPS = [
     #My apps
     'core',
     'imoveis',
+    'avaliacao',
+    # Other apps
+    'leaflet',
+    'djgeojson'
 ]
 
 MIDDLEWARE = [
@@ -120,6 +124,16 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': (-20.4697, -54.6201),
+    'DEFAULT_ZOOM': 11,
+    'TILES': [
+        ('OpenStreetMap', 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', '© OpenStreetMap contributors'),
+    ]
+}
+
+
+    
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
