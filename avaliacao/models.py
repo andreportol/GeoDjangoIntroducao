@@ -30,7 +30,14 @@ class AvaliacaoImob(models.Model):
     last_edi_1 = models.DateField(blank=True, null=True)
     geom = models.PointField(srid=31981,blank=True, null=True)
 
-    def __str__(self):
-        return self.inscant
+    class Meta:
+        verbose_name= "Avaliação Imobiliária"
+        verbose_name_plural = "Avaliações Imobiliárias"
+        #ordering=[-1] # transforma para ordem decrescente
+        ordering = ["-objectid"] # (-) ordena de forma decrescent
+        
+    
+        def __str__(self):
+            return self.inscant
     
     

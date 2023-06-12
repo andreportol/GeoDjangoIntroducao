@@ -17,5 +17,9 @@ class Imoveis(models.Model):
     shape_len = models.FloatField(blank=True, null=True)
     geom = models.MultiPolygonField(srid=31981, blank=True, null=True)
 
+    class Meta:
+        verbose_name = "Imóvel"
+        verbose_name_plural = "Imóveis"
+    
     def __str__(self):
         return self.inscant

@@ -6,5 +6,5 @@ from .models import Imoveis
 
 @admin.register(Imoveis)
 class ImoveisAdmin(LeafletGeoAdmin):
-    list_display= ['codlote', 'codelote', 'inscant']
+    list_display= ['codlote', 'usoimovel', 'inscant', 'ruaimo', 'nrporta']
  
