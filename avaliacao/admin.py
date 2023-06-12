@@ -8,5 +8,5 @@ from .models import AvaliacaoImob
 class AvaliacaoImobAdmin(LeafletGeoAdmin):
     list_display= [
             'informante', 'data', 'parcelamen', 'testada', 'areaterren', 'preco', 'quadra'
-        ]
+    ]
     

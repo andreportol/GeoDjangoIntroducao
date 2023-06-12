@@ -35,9 +35,10 @@ INSTALLED_APPS = [
     'core',
     'imoveis',
     'avaliacao',
+    'municipios',
     # Other apps
     'leaflet',
-    'djgeojson'
+    'djgeojson',
 ]
 
 MIDDLEWARE = [
