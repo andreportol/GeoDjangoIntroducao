@@ -11,3 +11,10 @@ class Municipios_MS(models.Model):
 
     def __str__(self):
         return self.nm_mun
+
+    @property
+    def popup_content(self):
+        popup =  "<span>nm_mun: </span>{}".format(self.nm_mun)
+        popup += "<span>sigla_uf: </span>{}".format(self.sigla_uf)
+        popup += "<span>area_km2: </span>{}".format(self.area_km2)
+        return popup
