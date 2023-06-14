@@ -14,7 +14,7 @@ class Municipios_MS(models.Model):
 
     @property
     def popup_content(self):
-        popup =  "<span>nm_mun: </span>{}".format(self.nm_mun)
-        popup += "<span>sigla_uf: </span>{}".format(self.sigla_uf)
-        popup += "<span>area_km2: </span>{}".format(self.area_km2)
+        popup =  f'<div><u><b>Município:</b></u> {self.nm_mun} </div>'
+        popup += f'<div><u><b>Sigla:</b></u> {self.sigla_uf} </div>'
+        popup += f'<div><u><b>Área:</b></u> {self.area_km2} </div>'
         return popup
