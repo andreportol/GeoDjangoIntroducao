@@ -33,8 +33,6 @@ INSTALLED_APPS = [
     'django.contrib.gis', # Para uso em banco de dados georeferenciados
     #My apps
     'core',
-    'imoveis',
-    'avaliacao',
     'municipios',
     # Other apps
     'leaflet',
