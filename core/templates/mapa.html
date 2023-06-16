@@ -1,41 +1,43 @@
 {% extends 'base.html' %}
 {% load static %}
-        {% block mapa %}
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3 class="mt-3 text-primary"><u><b>GEOPROCESSAMENTO</b></u></h3>
-            </div>
+    
+    {% block mapa %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h3 class="mt-3 text-primary"><u><b>GEOPROCESSAMENTO</b></u></h3>
         </div>
+    </div>
 
-        <div class="row cordefundo p-2 border rounded">
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="d-flex justify-content-start" id="coordenadas1">
-                            <input class="form-control w-25" type="text" id="latInput" placeholder="Latitude">
-                            <input class="form-control w-25 mx-3" type="text" id="lngInput" placeholder="Longitude">
-                            <button class="btn btn-primary" id="findButton">Encontrar</button>                 
-                        </div>
+    <div class="row cordefundo p-2 border rounded">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-start" id="coordenadas1">
+                        <input class="form-control w-25" type="text" id="latInput" placeholder="Latitude">
+                        <input class="form-control w-25 mx-3" type="text" id="lngInput" placeholder="Longitude">
+                        <button class="btn btn-primary" id="findButton">Encontrar</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="row border border-2 border-primary rounded mt-3">
-            <div class="col-md-12">
-                <div id="map"></div>
-                <input type="hidden" id="municipios_geojson" value="{% url 'municipios:municipios_geojson' %}">
-            </div>
+    <div class="row border border-2 border-primary rounded mt-3">
+        <div class="col-md-12">
+            <div id="map"></div>
+            <input type="hidden" id="municipios_geojson" value="{% url 'municipios:municipios_geojson' %}">
         </div>
-        <div class="row my-2 cordefundo p-2 border rounded d-flex justify-content-around">
-            <div class="col-md-3">
-                <button class="btn btn-success" id="addMarkerButton"><a class="text-white" href="{% url 'municipios:municipios_cadastrar' %}">Adicionar Marcador</a></button>
-            </div>
-            <div class="col-md-6">
+    </div>
+    <div class="row my-2 cordefundo p-2 border rounded d-flex justify-content-around">
+        <div class="col-md-3">
+            <button class="btn btn-success" id="addMarkerButton"><a class="text-white"
+                    href="{% url 'municipios:municipios_cadastrar' %}">Adicionar Marcador</a></button>
+        </div>
+        <div class="col-md-6">
 
-            </div>
-            <div class="col-md-3 d-flex flex-row-reverse">
-                <button class="btn btn-primary"><a class="text-white" href="{% url 'core:index' %}">VOLTAR</a></button>
-            </div>
         </div>
-        {% endblock mapa %}
+        <div class="col-md-3 d-flex flex-row-reverse">
+            <button class="btn btn-primary"><a class="text-white" href="{% url 'core:index' %}">VOLTAR</a></button>
+        </div>
+    </div>
+    {% endblock mapa %}

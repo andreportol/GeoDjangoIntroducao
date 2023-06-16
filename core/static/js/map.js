@@ -91,7 +91,3 @@ var overlays = {
 
 // Adicionar a camada base ao mapa
 baseLayer.addTo(map);
-
-
-
-

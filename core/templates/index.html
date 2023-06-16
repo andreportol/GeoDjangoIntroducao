@@ -1,31 +1,37 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block index %}
-        <div class="row cordefundo">
-            <div class="col-md-12 pb-3">
-                <h1 class="text-white pt-5 px-2">Geolocalização</h1>
-                <h3 class="form-text text-white px-3">ALP_SISTEMASGEO</h3>
-            </div>
-        </div>
-        <div class="container cordefundo mt-5 rounded">
-            <div class="row">
-                <h2 class="text-white pt-3">Camadas de visualização</h2>
-                <div class="col-md-12">
-                    <div class="form-check p-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label text-white" for="flexCheckDefault">
-                            Municípios
-                        </label>
-                    </div>
-                    <div class="form-check p-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                        <label class="form-check-label text-white" for="flexCheckChecked">
-                            Imóveis Avaliados
-                        </label>
-                    </div>
-                    <div class="pb-3">
-                        <a href="{% url 'core:mapa' %}" class="btn btn-warning text-white">Acessar Mapa>></a>
-                    </div>
+    {% block index %}
+    <div class="container-fluid cordefundo">
+        <div class="container">
+            <div class="row cordefundo">
+                <div class="col-md-12 pb-3">
+                    <h1 class="text-white pt-5">Geolocalização</h1>
+                    <h3 class="form-text text-white">ALP_SISTEMASGEO</h3>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="container cordefundo mt-5 rounded">
+        <div class="row">
+            <h2 class="text-white pt-3">Camadas de visualização</h2>
+            <div class="col-md-12">
+                <div class="form-check p-3">
+                    <input class="form-check-input" type="checkbox" value="1" id="check_municipios">
+                    <label class="form-check-label text-white" for="flexCheckDefault">
+                        Municípios
+                    </label>
+                </div>
+                <div class="form-check p-3">
+                    <input class="form-check-input" type="checkbox" value="1" id="check_areapublicas">
+                    <label class="form-check-label text-white" for="flexCheckChecked">
+                        Áreas Públicas
+                    </label>
+                </div>
+                <div class="pb-3">
+                    <a href="{% url 'core:mapa' %}" class="btn btn-warning text-white">Acessar Mapa>></a>
+                </div>
+            </div>
+        </div>
+    </div>
     {% endblock index %}
