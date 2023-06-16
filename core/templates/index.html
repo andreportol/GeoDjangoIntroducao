@@ -3,28 +3,27 @@
     {% block index %}
     <div class="container-fluid cordefundo">
         <div class="container">
-            <div class="row cordefundo">
+            <div class="row">
                 <div class="col-md-12 pb-3">
-                    <h1 class="text-white pt-5">Geolocalização</h1>
-                    <h3 class="form-text text-white">ALP_SISTEMASGEO</h3>
+                    <h1 class="text-white pt-5 px-2">Geolocalização</h1>
+                    <h3 class="form-text text-white px-3">ALP_SISTEMASGEO</h3>
                 </div>
             </div>
-        </div>
+        </div>          
     </div>
-
     <div class="container cordefundo mt-5 rounded">
         <div class="row">
             <h2 class="text-white pt-3">Camadas de visualização</h2>
             <div class="col-md-12">
                 <div class="form-check p-3">
-                    <input class="form-check-input" type="checkbox" value="1" id="check_municipios">
-                    <label class="form-check-label text-white" for="flexCheckDefault">
+                    <input class="form-check-input" type="checkbox" value="exibirMun" id="check_municipios" name="input_municipios">
+                    <label class="form-check-label text-white" for="check_municipios">
                         Municípios
                     </label>
                 </div>
                 <div class="form-check p-3">
-                    <input class="form-check-input" type="checkbox" value="1" id="check_areapublicas">
-                    <label class="form-check-label text-white" for="flexCheckChecked">
+                    <input class="form-check-input" type="checkbox" value="exibirArea" id="check_areapublicas" name="input_areaspublicas">
+                    <label class="form-check-label text-white" for="check_areapublicas">
                         Áreas Públicas
                     </label>
                 </div>
@@ -35,3 +34,5 @@
         </div>
     </div>
     {% endblock index %}
+
+

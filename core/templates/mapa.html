@@ -1,6 +1,5 @@
-{% extends 'base.html' %}
+{% extends 'base.html'%}
 {% load static %}
-    
     {% block mapa %}
     <div class="row">
         <div class="col-md-12 text-center">
@@ -40,4 +39,7 @@
             <button class="btn btn-primary"><a class="text-white" href="{% url 'core:index' %}">VOLTAR</a></button>
         </div>
     </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'libs/leaflet.js' %}"></script>
+<script src="{% static 'js/map.js' %}"></script>
     {% endblock mapa %}

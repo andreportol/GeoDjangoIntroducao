@@ -1,6 +1,6 @@
 // Configurações do mapa
 var map = L.map('map').setView([-20.4379513, -54.618873], 11);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 // Variável para armazenar o marcador
 var marker;
@@ -67,8 +67,8 @@ var myStyle = {
   fillOpacity: 1
 }
 
-var municipios_geojson_dataurl = $("#municipios_geojson").val(); // recupera o valor da URL, onde o id é municipios_geojson
-//var municipiosLayer = L.geoJSON([],myStyle).addTo(map);// cria uma camada vazia e adiciona ao mapa
+var municipios_geojson_dataurl = $("#municipios_geojson").val(); // recupera o valor da URL, onde o id é municipios_geojson(mapa.html)
+//var municipiosLayer = L.geoJSON([],myStyle).addTo(map);// cria uma camada vazia e adiciona o estilo ao mapa
 
 var municipiosLayer = L.geoJSON(null, {
   style: myStyle,// chamando a configuração dos shapefiles
