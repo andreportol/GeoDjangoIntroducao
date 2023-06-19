@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6 form mt-5 p-3">
+                <form method="post" class="form-control cordefundo text-white">
+                    <h4 class="form-label text-center py-2" for="inscant"><u><i>Cadastro de Área Pública</i></u></h4>
+                    {% csrf_token %}
+                    <input class="form-control mb-3" type="text" name="inscant" id="inscant"
+                        placeholder="Inscrição Imobiliária">
+                    <input class="form-control mb-3" type="text" name="nome_invasor" id="nome_invasor"
+                        placeholder="Nome do Invasor">
+                    <input class="form-control mb-3" type="text" name="rua" id="rua" placeholder="Rua">
+                    <input class="form-control mb-3" type="number" name="numero" id="numero" placeholder="Número">
+                    <input class="form-control mb-3" type="text" name="bairro" id="bairro" placeholder="Bairro">
+                    <input class="form-control mb-3" type="text" name="nome_auditor" id="nome_auditor"
+                        placeholder="Nome do Fiscal">
+                    <input class="form-control mb-3" type="date" name="data_vistoria" id="data_vistoria">
+                    <div class="d-flex justify-content-end pb-3">
+                        <a class="btn btn-success" href="#" role="button">Cadastrar</a>
+                        <a class="btn btn-warning mx-2 text-white" href="#" role="button">Cancelar</a>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

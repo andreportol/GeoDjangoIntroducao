@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     #My apps
     'core',
     'municipios',
+    'areas_publicas',
     # Other apps
     'leaflet',
     'djgeojson',
